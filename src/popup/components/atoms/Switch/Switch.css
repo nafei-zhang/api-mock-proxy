@@ -4,7 +4,8 @@
   border-radius: calc(var(--em) * 2);
   height: 22px;
   width: 44px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
   position: relative;
   color: var(--brand, var(--primary));
   cursor: pointer;
@@ -48,14 +49,14 @@
   border-radius: 50%;
   background-color: var(--brand-soft, var(--c5));
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: all 0.2s;
 }
 
 .switch.switch__checked:after {
-  left: auto;
-  left: 24px;
+  left: 22px;
   background-color: var(--brand-soft, var(--c5));
 }
 
