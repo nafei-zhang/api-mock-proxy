@@ -20,7 +20,7 @@ const bootstrapDevtoolsTab = () => {
   const devtools = browser?.devtools || browser?.browser?.devtools || browser?.chrome?.devtools;
   if (devtools?.panels) {
     devtools.panels.create(
-      'api-mock-proxy',
+      'Api mock proxy',
       '',
       'popup.html',
       (panel) => { },
