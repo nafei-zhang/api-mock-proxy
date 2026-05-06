@@ -174,7 +174,8 @@ export default (window) => {
           ...(!!override && { override }),
         });
         if (override) {
-          proxyNotification.showNotification();
+          const url = argumentsList[0] instanceof Request ? argumentsList[0].url : argumentsList[0];
+          proxyNotification.showNotification(url);
           return overrideFetch(id, override);
         } else {
           return passFetchTrough(id, target, thisArg, argumentsList);

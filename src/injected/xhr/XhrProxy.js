@@ -69,7 +69,7 @@ export default class XhrProxy {
         this.readyState = this.realXhr.readyState;
         const overrideXhr = new OverrideXhr(this);
         overrideXhr.doOverride(body, this.readyState);
-        proxyNotification.showNotification();
+        proxyNotification.showNotification(this.openArguments.url);
       } else {
         return applyReal();
       }

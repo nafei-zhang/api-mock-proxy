@@ -10,16 +10,18 @@ const STYLES = `
     right: 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     z-index: 2147483647;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-size: 14px;
     font-weight: 500;
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 280px;
+    max-width: 400px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: slideIn 0.3s ease;
   }
@@ -35,10 +37,17 @@ const STYLES = `
     }
   }
 
+  #${NOTIFICATION_ID} .proxy-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   #${NOTIFICATION_ID} .proxy-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
+    flex-shrink: 0;
   }
 
   #${NOTIFICATION_ID} .proxy-icon svg {
@@ -46,12 +55,32 @@ const STYLES = `
     height: 100%;
   }
 
+  #${NOTIFICATION_ID} .proxy-title {
+    font-weight: 600;
+    flex-grow: 1;
+  }
+
   #${NOTIFICATION_ID} .proxy-count {
     background: rgba(255, 255, 255, 0.2);
-    padding: 2px 8px;
+    padding: 2px 10px;
     border-radius: 12px;
     font-size: 12px;
     font-weight: 600;
+  }
+
+  #${NOTIFICATION_ID} .proxy-url {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
+    word-break: break-all;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 `;
 
@@ -67,19 +96,22 @@ const createNotification = () => {
   notificationElement = document.createElement('div');
   notificationElement.id = NOTIFICATION_ID;
   notificationElement.innerHTML = `
-    <span class="proxy-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M5 12h14"></path>
-        <path d="M12 5l7 7-7 7"></path>
-      </svg>
-    </span>
-    <span>Request Proxied</span>
-    <span class="proxy-count"></span>
+    <div class="proxy-header">
+      <span class="proxy-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5l7 7-7 7"></path>
+        </svg>
+      </span>
+      <span class="proxy-title">Request Proxied</span>
+      <span class="proxy-count"></span>
+    </div>
+    <div class="proxy-url"></div>
   `;
   document.body.appendChild(notificationElement);
 };
 
-const showNotification = () => {
+const showNotification = (url) => {
   activeRequestCount++;
   
   createNotification();
@@ -87,6 +119,11 @@ const showNotification = () => {
   const countElement = notificationElement.querySelector('.proxy-count');
   if (countElement) {
     countElement.textContent = activeRequestCount;
+  }
+  
+  const urlElement = notificationElement.querySelector('.proxy-url');
+  if (urlElement) {
+    urlElement.textContent = url || '';
   }
   
   notificationElement.style.display = 'flex';
@@ -98,7 +135,7 @@ const showNotification = () => {
   
   timeoutId = setTimeout(() => {
     hideNotification();
-  }, 3000);
+  }, 4000);
 };
 
 const hideNotification = () => {
