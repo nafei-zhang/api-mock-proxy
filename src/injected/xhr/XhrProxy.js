@@ -2,6 +2,7 @@ import { trackXhr } from './TrackXhr';
 import overridesStorage from '../overrides/Overrides';
 import OverrideXhr from './OverrideXhr';
 import { HTTP_STATUS_CODES } from 'utils/constants';
+import proxyNotification from '../ui/ProxyNotification';
 
 const proxyFunction = (func, replacement) =>
   new Proxy(func, {
@@ -68,6 +69,7 @@ export default class XhrProxy {
         this.readyState = this.realXhr.readyState;
         const overrideXhr = new OverrideXhr(this);
         overrideXhr.doOverride(body, this.readyState);
+        proxyNotification.showNotification();
       } else {
         return applyReal();
       }

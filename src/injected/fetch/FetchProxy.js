@@ -7,6 +7,7 @@ import {
   tryStringifyRequestBody,
 } from '../../common/utils';
 import { v4 as uuid } from 'uuid';
+import proxyNotification from '../ui/ProxyNotification';
 
 const convertHeadersToArray = (headers) => {
   let result = [];
@@ -173,6 +174,7 @@ export default (window) => {
           ...(!!override && { override }),
         });
         if (override) {
+          proxyNotification.showNotification();
           return overrideFetch(id, override);
         } else {
           return passFetchTrough(id, target, thisArg, argumentsList);
