@@ -1,0 +1,15 @@
+.response-header {
+  justify-content: space-between;
+  gap: calc(var(--em) * 2);
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: calc(var(--em) * 2);
+  border: 1px solid var(--surface-border, var(--c6));
+  border-radius: var(--ant-radius-lg);
+  background: var(--surface-0, #ffffff);
+  box-shadow: var(--ant-shadow-sm);
+}
+
+.body__content {
+  margin-top: calc(var(--em) * 2);
+}

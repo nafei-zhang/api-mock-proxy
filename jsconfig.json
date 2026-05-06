@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"],
+      "atoms/*": ["./src/popup/components/atoms/*"],
+      "molecules/*": ["./src/popup/components/molecules/*"],
+      "organisms/*": ["./src/popup/components/organisms/*"],
+      "utils/*": ["./src/popup/components/utils/*"],
+      "templates/*": ["./src/popup/components/templates/*"],
+      "store/*": ["./src/popup/redux/*"],
+      "app/*": ["./src/popup/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

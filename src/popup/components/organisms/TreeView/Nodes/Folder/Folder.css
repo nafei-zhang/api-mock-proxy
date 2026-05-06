@@ -1,0 +1,29 @@
+.folder__icon {
+  fill: var(--g1);
+  transform: scale(1.05);
+}
+
+.folder__name {
+  font-weight: 400;
+  color: black;
+}
+
+.folder__children_collapsed {
+  display: none;
+}
+
+.folder__chevron {
+  position: absolute;
+  right: var(--em);
+  transform: translate(-50%);
+  fill: var(--g5);
+  transition: all 0.3s;
+}
+
+.treeView__row_selected .folder__chevron {
+  fill: var(--primary);
+}
+
+.folder__chevron_collapsed {
+  transform: rotate(-90deg);
+}

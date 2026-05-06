@@ -1,0 +1,32 @@
+.request-page .node-body {
+  padding: calc(var(--em) * 2);
+}
+
+.request-page__actions {
+  margin: calc(var(--em) * 2) calc(var(--em) * 2) 0;
+}
+
+.request-view {
+  padding: calc(var(--em) * 2);
+}
+
+.request-view__name {
+  margin-bottom: calc(var(--em) * 2);
+}
+
+.request-view__section {
+  margin-top: calc(var(--em) * 2);
+}
+
+.request-view__url,
+.request-view__body {
+  margin-top: calc(var(--em) * 1);
+}
+
+.response-view .request-view__section:first-child {
+  margin-top: 0;
+}
+
+.button-row__back {
+  margin-bottom: calc(var(--em) * -4);
+}

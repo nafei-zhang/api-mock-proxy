@@ -1,0 +1,66 @@
+.pagination {
+  display: flex;
+  flex-flow: row;
+}
+
+.pagination__page button,
+.pagination__ellipsis {
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid var(--surface-border, var(--ant-border));
+  cursor: pointer;
+  background: #fff;
+  color: var(--g2);
+  font-size: 14px;
+  width: var(--ant-control-height, 32px);
+  height: var(--ant-control-height, 32px);
+  font-weight: 400;
+  border-radius: var(--ant-radius-sm);
+  margin-right: calc(var(--em) * 1);
+}
+
+.pagination__page button:hover {
+  color: var(--brand, var(--primary));
+  background-color: var(--surface-1, #fafafa);
+  border-radius: var(--ant-radius-sm);
+}
+
+.pagination__page_selected button {
+  color: var(--primary);
+  font-weight: 500;
+  background-color: #e6f4ff;
+  border-color: #91caff;
+}
+
+.pagination__ellipsis {
+  cursor: initial;
+  font-weight: 500;
+  border-color: transparent;
+  background: transparent;
+}
+
+.pagination__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__navigation_to-start {
+  transform: rotate(180deg);
+}
+
+.pagination__navigation_backward {
+  transform: rotate(90deg);
+}
+
+.pagination__navigation_forward {
+  transform: rotate(-90deg);
+}
+
+.pagination__navigation .icon_md {
+  fill: var(--g4);
+}
+
+.pagination__navigation:hover .icon_md {
+  fill: var(--primary);
+}

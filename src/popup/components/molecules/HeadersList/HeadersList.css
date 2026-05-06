@@ -1,0 +1,40 @@
+.headers-list {
+  margin-top: calc(var(--em) * 1.5);
+}
+
+.headers-list__search {
+  max-width: calc(55% - var(--em) * 1.5);
+  margin-bottom: calc(var(--em) * 2);
+}
+
+.header__input_name:after,
+.header__input_name:before {
+  content: '';
+  width: calc(var(--em) * 0.375);
+  height: calc(var(--em) * 0.375);
+  border-radius: 50%;
+  position: absolute;
+  right: calc(var(--em) * -1.5);
+  bottom: calc(var(--em) * 2);
+  background-color: var(--surface-border, var(--g5));
+}
+
+.header__input_name:before {
+  bottom: calc(var(--em) * 3);
+}
+
+.headers-list__row {
+  gap: calc(var(--em) * 2);
+}
+
+.headers-list__row + .headers-list__row {
+  margin-top: calc(var(--em) * 2);
+}
+
+.headers-list__empty {
+  margin: calc(var(--em) * 1) 0;
+}
+
+.headers-list__row .header__input_name {
+  margin-right: calc(var(--em) * 1.5);
+}

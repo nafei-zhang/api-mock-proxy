@@ -1,0 +1,67 @@
+@import-normalize;
+@import './components/atoms/Colors/Colors.css';
+@import './components/atoms/Text/Text.css';
+@import './components/atoms/Sizes/Sizes.css';
+
+:root {
+  --font-family:
+    'Inter', 'SF Pro Text', 'SF Pro Display', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-strong, #1d2a52);
+  background: var(--surface-1, #f7f9ff);
+  font-size: var(--ant-font-size, 14px);
+  line-height: var(--ant-line-height, 1.5715);
+}
+
+#root {
+  height: 100%;
+}
+
+body,
+button,
+a {
+  font-family: var(--font-family);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus,
+.focus {
+  outline-color: var(--focus);
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: -1px;
+}
+
+a {
+  color: var(--brand, var(--primary));
+  font-weight: bold;
+}

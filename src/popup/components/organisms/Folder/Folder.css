@@ -1,0 +1,25 @@
+.folder-page {
+  padding: 0;
+}
+
+.folder-page__variables-actions {
+  margin: calc(var(--em) * 2);
+}
+
+.folder-settings {
+  margin: calc(var(--em) * 2);
+  padding: 0;
+}
+
+.folder-settings__actions {
+  margin-top: calc(var(--em) * 2);
+}
+
+.folder-settings__name {
+  margin-top: calc(var(--em) * 2);
+}
+
+.folder-settings__title {
+  margin-top: calc(var(--em) * 3);
+  margin-bottom: calc(var(--em) * 1);
+}

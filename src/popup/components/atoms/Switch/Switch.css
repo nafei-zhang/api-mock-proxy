@@ -1,0 +1,65 @@
+.switch {
+  background-color: var(--surface-0, white);
+  border: 1px solid var(--surface-border, var(--ant-border));
+  border-radius: calc(var(--em) * 2);
+  height: 22px;
+  width: 44px;
+  display: block;
+  position: relative;
+  color: var(--brand, var(--primary));
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.switch:focus-within {
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+  outline: none;
+}
+
+.switch__checkbox {
+  clip-path: inset(100%);
+}
+
+.switch__label {
+  font-size: 0;
+  font-weight: 500;
+  height: 100%;
+  line-height: 20px;
+  text-align: right;
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s;
+  left: 20px;
+}
+
+.switch.switch__checked .switch__label {
+  left: 6px;
+}
+
+.switch:after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--brand-soft, var(--c5));
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+
+.switch.switch__checked:after {
+  left: auto;
+  left: 24px;
+  background-color: var(--brand-soft, var(--c5));
+}
+
+.switch.switch__checked {
+  border-color: var(--brand, var(--primary));
+  background-color: rgba(22, 119, 255, 0.12);
+}

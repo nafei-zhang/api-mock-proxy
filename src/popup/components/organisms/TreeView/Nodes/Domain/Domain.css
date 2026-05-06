@@ -1,0 +1,47 @@
+.treeView__row {
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.domain__icon {
+  fill: var(--g1);
+}
+
+.domain__name {
+  color: black;
+}
+
+.domain__children_collapsed {
+  display: none;
+}
+
+.domain__chevron {
+  position: absolute;
+  top: calc(var(--em) * 2);
+  right: var(--em);
+  transform: translate(-50%);
+  fill: var(--g5);
+  transition: transform 0.3s;
+}
+
+.treeView__row_selected .domain__chevron {
+  fill: var(--primary);
+}
+
+.domain__chevron_collapsed {
+  transform: rotate(-90deg);
+}
+
+.treeView__row.domain_current::before {
+  content: '';
+  position: absolute;
+  width: calc(var(--em) * 0.5);
+  height: 100%;
+  background-color: var(--c3);
+  left: 0;
+  transition: all 0.3s;
+  border-radius: calc(var(--em) * 0.5);
+}
+
+.treeView__row.domain_current.treeView__row_selected::before {
+  background-color: var(--c2);
+}

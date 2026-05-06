@@ -1,0 +1,31 @@
+.node-hoc {
+  transition: all 0.1s;
+}
+
+.node-hoc.node-hoc_dropping {
+  transition: all 0.1s;
+  background-color: var(--c4);
+  margin-bottom: calc(var(--em) * 2.5);
+}
+
+.treeView__node-icon_disabled {
+  position: absolute;
+  left: calc(var(--em) * -1);
+  transition: all 0.2s;
+}
+
+.treeView_minified .treeView__node-icon_disabled {
+  width: 10px;
+  height: 10px;
+  left: calc(var(--em) * -0.75);
+}
+
+.treeView__row:hover .treeView__node-icon_disabled,
+.treeView__row_selected .treeView__node-icon_disabled {
+  left: calc(var(--em) * -3);
+}
+
+.treeView_minified .treeView__row:hover .treeView__node-icon_disabled,
+.treeView_minified .treeView__row_selected .treeView__node-icon_disabled {
+  left: calc(var(--em) * -0.75);
+}

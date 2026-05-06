@@ -1,0 +1,29 @@
+.pill {
+  display: block;
+  border-radius: var(--ant-radius);
+  min-width: 64px;
+  height: 24px;
+  display: inline-block;
+  text-align: center;
+  padding-left: calc(var(--em) * 2);
+  padding-right: calc(var(--em) * 2);
+  box-sizing: border-box;
+  border: 1px solid var(--surface-border, var(--ant-border));
+  background: var(--surface-1, var(--g7));
+  color: var(--text-secondary, var(--g2));
+}
+
+.pill.pill_button {
+  cursor: pointer;
+  height: 28px;
+}
+
+.pill.pill_button:hover {
+  background-color: #e6f4ff;
+  border-color: #91caff;
+  color: var(--brand, var(--primary));
+}
+
+.pill_error {
+  color: var(--accent);
+}

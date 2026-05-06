@@ -1,0 +1,100 @@
+h1 {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+  text-transform: none;
+}
+
+h4 {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.paragraph_lg {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+p,
+.paragraph_sm {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.label_strong {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.label_medium {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.label_weak {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}

@@ -1,0 +1,318 @@
+.treeView {
+  width: 272px;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  border: 1px solid var(--surface-border, var(--g6));
+  border-radius: var(--ant-radius-lg);
+  box-shadow: var(--ant-shadow-sm);
+  background: var(--surface-0, #ffffff);
+}
+
+.treeView ol,
+.treeView ul,
+.treeView li {
+  width: fit-content;
+}
+
+.treeView_minified ol,
+.treeView_minified ul,
+.treeView_minified li {
+  width: auto;
+}
+
+.treeView_md {
+  padding-left: var(--em);
+}
+
+.treeView_minified {
+  padding-left: var(--em);
+  min-width: 0;
+  padding-top: calc(var(--em) * 8);
+}
+
+.treeView_minified .treeView__row {
+  margin-left: 0;
+  width: calc(var(--em) * 7);
+  padding: var(--em);
+  min-width: 0;
+}
+
+.treeView_minified .xhrNode__type {
+  font-size: 12px;
+  margin-right: 0;
+}
+
+.treeView ol {
+  transition: margin-left 0.4s;
+}
+
+.treeView_minified ol {
+  margin-left: 0;
+}
+
+.treeView_minified .treeView__add-domain {
+  margin-top: var(--em);
+}
+
+.treeView_minified .domain__icon,
+.treeView_minified .folder__icon,
+.treeView__add-domain .icon_md {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.treeView_minified .treeView__add-domain {
+  padding: var(--em);
+  min-width: calc(var(--em) * 7);
+  font-size: 0;
+}
+
+.treeView .nodeName__name,
+.treeView .treeView__header {
+  white-space: nowrap;
+}
+
+.treeView_minified .treeView__header,
+.treeView_minified .nodeName__name {
+  display: none;
+}
+
+.treeView__show-hide {
+  position: absolute;
+  top: calc(var(--em) * 2);
+  right: var(--em);
+  padding: var(--em);
+  min-width: calc(var(--em) * 7);
+  justify-content: flex-end;
+  background-color: transparent;
+  filter: none;
+}
+
+.treeView__show-hide .icon_md {
+  fill: var(--g5);
+  transition: all 0.5s;
+  transform: rotate(180deg);
+  float: right;
+}
+
+.treeView__show-hide:hover {
+  background-color: var(--c5);
+}
+
+.treeView__show-hide:hover .icon_md {
+  fill: var(--primary);
+}
+
+.treeView__show-hide_minified {
+  justify-content: flex-start;
+}
+
+.treeView__show-hide_minified .icon_md {
+  transform: rotate(0deg);
+}
+
+.treeView__child {
+  color: var(--g1);
+}
+
+.treeView__row {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--em) * 1.25) calc(var(--em) * 3) calc(var(--em) * 1.25)
+    calc(var(--em) * 2);
+  border-radius: var(--ant-radius-sm);
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: calc(var(--em) * 25);
+  position: relative;
+  height: calc(var(--em) * 4.5);
+  box-sizing: border-box;
+}
+
+.treeView__row:hover {
+  background-color: var(--brand-soft, var(--c5));
+}
+
+.treeView__row_selected,
+.treeView__row_selected:hover {
+  background-color: var(--brand-soft, var(--c6));
+  color: var(--brand, var(--primary));
+  font-weight: 500;
+}
+
+.treeView__add-domain {
+  width: 100%;
+  padding-left: calc(var(--em) * 2);
+  padding-right: calc(var(--em) * 3);
+}
+
+.treeView__add-domain:hover {
+  background-color: var(--brand-soft, var(--c5));
+}
+
+.treeView__add-domain:hover .icon_md {
+  transform: scale(1.3) rotate(-90deg);
+}
+
+.node-body {
+  transition: all 0.3s;
+}
+
+.node-body_disabled {
+  filter: grayscale(100%);
+}
+
+.treeView__header {
+  display: inline-block;
+}
+
+.treeView__resize-handler {
+  width: calc(var(--em) * 0.25);
+  height: 100%;
+  /* min-height: 480px; */
+  border: none;
+  background: transparent;
+  cursor: ew-resize;
+  outline: none;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding: 0;
+}
+
+.treeView__resize-handler:before {
+  content: '';
+  position: absolute;
+  width: calc(var(--em) * 1.5);
+  opacity: 0.8;
+  height: 100%;
+  /* min-height: 480px; */
+  top: 0;
+  right: 0;
+}
+
+.treeView-container {
+  position: relative;
+  overflow-x: visible;
+  height: 100%;
+  min-height: 0;
+  /* min-height: 480px; */
+}
+
+.treeView__resize-handler:hover {
+  background-color: var(--c5);
+}
+
+.treeView__resize-handler:hover:before {
+  background-color: var(--c5);
+}
+
+.treeView__resize-handler.treeView__resize-handler_dragged {
+  background-color: var(--primary);
+  width: calc(var(--em) * 0.5);
+}
+
+.treeView__resize-handler.treeView__resize-handler_dragged:before {
+  background-color: transparent;
+}
+
+.treeView__header_md {
+  font-size: calc(var(--em) * 1.5);
+}
+
+.treeView__header_sm {
+  font-size: calc(var(--em) * 1.5);
+}
+
+.treeView__header_xs {
+  visibility: hidden;
+}
+
+.node__row {
+  transition: all 0.1s;
+}
+
+ul.tree-actions {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: var(--surface-1, #fafafa);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 calc(var(--em) * 2);
+  overflow: hidden;
+}
+
+ul.tree-actions.tree-actions_minifying {
+  /* we need important as framer motion sets inline styles that override everything */
+  height: calc(var(--em) * 5) !important;
+  flex-wrap: nowrap !important;
+}
+
+ul.tree-actions li {
+  position: relative;
+  flex: 1 1;
+  justify-content: center;
+  display: flex;
+}
+
+.treeView_minified ul.tree-actions {
+  flex-flow: row;
+  gap: 0;
+  padding: 0;
+  padding-bottom: calc(var(--em) * 0.25);
+}
+
+.tree-actions button {
+  background-color: transparent;
+  font-size: 12px;
+  color: var(--g2);
+  position: relative;
+  padding: var(--em);
+}
+
+.treeView_minified .tree-actions button {
+  padding: calc(var(--em) * 0.5);
+}
+
+.tree-actions button:after {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 0px;
+  top: 0;
+  left: 50%;
+  border-top: none;
+  transition: width 0.1s, left 0.1s;
+  transition-timing-function: ease-in;
+}
+
+.tree-actions button:hover:after {
+  content: '';
+  position: absolute;
+  width: calc(100%);
+  height: 1px;
+  top: 0;
+  left: 0;
+  border-top: 2px solid var(--primary);
+}
+
+.tree-actions button:hover .icon_md {
+  transform: none;
+}
+
+.tree-actions .icon_md {
+  fill: var(--g2);
+}

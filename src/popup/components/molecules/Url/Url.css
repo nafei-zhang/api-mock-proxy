@@ -1,0 +1,22 @@
+.url-editor {
+  width: 100%;
+}
+
+.url-editor__row {
+  display: flex;
+  width: 100%;
+}
+
+.url-editor__input {
+  margin-left: calc(var(--em) * 3);
+  flex: 1 1;
+}
+
+.queryParameters {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-top: calc(var(--em) * 2);
+  width: 100%;
+}

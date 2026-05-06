@@ -1,0 +1,48 @@
+.popup {
+  width: 940px;
+  min-height: 620px;
+}
+
+.app-container {
+  --surface-0: var(--ant-bg-container);
+  --surface-1: var(--ant-bg-soft);
+  --surface-2: #f0f5ff;
+  --surface-border: var(--ant-border);
+  --text-strong: var(--ant-text);
+  --text-muted: var(--ant-text-secondary);
+  --brand: var(--ant-primary);
+  --brand-soft: #e6f4ff;
+  --shadow-soft: var(--ant-shadow);
+
+  height: 100%;
+  overflow: hidden;
+  background: var(--ant-bg-layout);
+  color: var(--text-strong);
+  padding: calc(var(--em) * 1.5);
+}
+
+.app {
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.app-navigation {
+  box-sizing: border-box;
+  grid-column: 1 / 5;
+  border-right: 1px solid #dedede;
+  padding: 1rem 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.app-main {
+  padding: 1rem;
+  grid-column: 5 / 13;
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,43 @@
+.urlParameter {
+  align-items: center;
+  margin-top: calc(var(--em) * 2);
+}
+
+.queryParamterCheckBox_input {
+  margin: 0;
+}
+
+.queryParamterKey {
+  margin-right: calc(var(--em) * 3);
+  flex: 1 1;
+}
+
+.queryParamterValue {
+  flex: 1 1;
+}
+
+.queryParamterKey__label,
+.queryParamterValue__label,
+.queryParamterCheckBox__label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.urlParamter__switch {
+  align-self: center;
+  margin-right: calc(var(--em) * 3);
+}
+
+.urlParamter__switch_labeled {
+  margin-top: calc(var(--em) * 3);
+}
+
+.queryParameter__delete_hidden {
+  visibility: hidden;
+}
