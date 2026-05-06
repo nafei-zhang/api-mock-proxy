@@ -1,4 +1,4 @@
-### Browser proxy integration tests
+### api mock proxy integration tests
 
 1. Import the E2E.json for overriding into the browser plugin.
 2. Execute npm run start in this folder, or npm run e2e in the folder above (root folder of the project).

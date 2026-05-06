@@ -1,7 +1,7 @@
 {
   "name": "api-mock-proxy-integration",
   "version": "0.0.1",
-  "description": "E2E tests for browser proxy",
+  "description": "E2E tests for api mock proxy",
   "main": "index.js",
   "scripts": {
     "watch": "nodemon index.js",

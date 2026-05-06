@@ -1,6 +1,6 @@
 {
-  "short_name": "Browser proxy",
-  "name": "Browser Proxy",
+  "short_name": "api mock proxy",
+  "name": "api mock proxy",
   "version": "0.0.1",
   "manifest_version": 3,
   "description": "Replace fetch, XMLHttpRequest, AJAX responses on the fly!",
